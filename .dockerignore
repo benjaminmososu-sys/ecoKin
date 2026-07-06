@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+.venv/
+venv/
+ENV/
+
+# Node/Vite build artifacts
+node_modules/
+dist/
+
+# Git
+.git
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log

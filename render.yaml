@@ -1,0 +1,20 @@
+# Template render.yaml for Render.com deployment (edit placeholders before use)
+# More info: https://render.com/docs/render.yaml
+
+services:
+  - type: web
+    name: eco-kin-backend
+    env: docker
+    dockerfilePath: Dockerfile
+    branch: main
+    plan: free
+    # Leave buildCommand/startCommand empty because Dockerfile is used
+    buildCommand: ""
+    startCommand: ""
+    envVars:
+      - key: DATABASE_URL
+        value: "postgres://<USERNAME>:<PASSWORD>@<HOST>:5432/<DATABASE>"
+      - key: APP_URL
+        value: "https://your-frontend-domain.tld"
+      - key: GEMINI_API_KEY
+        value: ""
