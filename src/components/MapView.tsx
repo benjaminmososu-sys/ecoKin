@@ -195,28 +195,28 @@ export default function MapView({ reports, onAddReport, onUpdateReportStatus }: 
   };
 
   return (
-    <div className="relative w-full h-[calc(100vh-64px-72px)] bg-slate-100 overflow-hidden">
-      {/* Search Bar Overlay */}
+  <div className="relative w-full h-[calc(100vh-64px-72px)] bg-slate-100 overflow-hidden">
+    {/* Search Bar Overlay */}
       <div className="absolute top-4 left-0 right-0 z-50 px-4 pointer-events-auto">
-        <form onSubmit={handleSearchSubmit} className="max-w-md mx-auto relative group">
-          <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">
-            <Search className="w-5 h-5 text-slate-400 group-focus-within:text-primary transition-colors" />
-          </div>
-          <input
-            type="text"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-12 pr-12 py-3 bg-white/95 backdrop-blur-md shadow-lg border-none rounded-2xl text-sm text-slate-800 placeholder-slate-400 focus:outline-hidden focus:ring-2 focus:ring-primary/40 transition-all font-sans relative z-50"
-            placeholder="Rechercher une adresse, un quartier..."
-          />
-          <button
-            type="button"
-            onClick={() => alert('Localisation GPS simulée de l\'appareil.')}
-            className="absolute inset-y-0 right-2 flex items-center px-3 text-primary hover:text-emerald-700 active:scale-90 transition-all"
-          >
-            <Navigation className="w-5 h-5" />
-          </button>
-        </form>
+          <form onSubmit={handleSearchSubmit} className="max-w-md mx-auto relative group">
+                <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+                  <Search className="w-5 h-5 text-slate-400 group-focus-within:text-primary transition-colors" />
+                </div>
+                <input 
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-12 pr-12 py-3 bg-white/95 backdrop-blur-md shadow-lg border-none rounded-2xl text-sm text-slate-800 placeholder-slate-400 focus:outline-hidden focus:ring-2 focus:ring-primary/40 transition-all font-sans relative z-50"
+                  placeholder="Rechercher une adresse, un quartier..."
+                />
+                <button
+                  type="button"
+                  onClick={() => alert('Localisation GPS simulée de l\'appareil.')}
+                  className="absolute inset-y-0 right-2 flex items-center px-3 text-primary hover:text-emerald-700 active:scale-90 transition-all"
+                >
+              <Navigation className="w-5 h-5" />
+            </button>
+          </form>
       </div>
 
       {/* Map wrapper (placed under overlays) */}
@@ -241,7 +241,7 @@ export default function MapView({ reports, onAddReport, onUpdateReportStatus }: 
             ))}
           </div>
         )}
-      </div>
+</div>
 
       {/* Floating Action Button (FAB) to Add Report */}
       <button
