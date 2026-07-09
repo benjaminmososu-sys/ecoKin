@@ -13,7 +13,7 @@ services:
     startCommand: ""
     envVars:
       - key: DATABASE_URL
-        value: "postgres://<USERNAME>:<PASSWORD>@<HOST>:5432/<DATABASE>"
+        value: "postgresql://eco_kinshasa_db_user:h7JpqL11gioVTzjvouowfKlwur0j98yE@dpg-d97e44ok1i2s73dgif10-a.oregon-postgres.render.com/eco_kinshasa_db"
       - key: APP_URL
         value: "https://your-frontend-domain.tld"
       - key: GEMINI_API_KEY

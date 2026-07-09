@@ -2,7 +2,12 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-DATABASE_URL = "postgresql://postgres:0898292837@localhost:5432/eco_kinshasa_db"
+import os
+
+DATABASE_URL = os.getenv(
+    'DATABASE_URL',
+    'postgresql://postgres:0898292837@localhost:5432/eco_kinshasa_db'
+)
 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
