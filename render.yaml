@@ -5,7 +5,7 @@ services:
   - type: web
     name: eco-kin-backend
     env: docker
-    dockerfilePath: Dockerfile
+    dockerfilePath: backend/Dockerfile
     branch: main
     plan: free
     # Leave buildCommand/startCommand empty because Dockerfile is used
